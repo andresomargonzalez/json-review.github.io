@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+
+.content {
+  max-width: 1500px !important;
+}
+
+button {
+  margin-bottom: 20px;
+  margin-right: 16px;
+}
