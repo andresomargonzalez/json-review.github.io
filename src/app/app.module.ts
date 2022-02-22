@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -22,6 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatInputModule,
     MatButtonModule,
+    MatPaginatorModule,
     FormsModule,
     BrowserModule,
     HttpClientModule,
