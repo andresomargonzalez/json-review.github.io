@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   title = 'website';
-  displayedColumns: string[] = ['description', 'brandName', 'foodCategory', 'marketCountry', 'packageWeight', 'servingSize'];
+  displayedColumns: string[] = ['description', 'brandOwner', 'brandName', 'foodCategory', 'marketCountry', 'packageWeight', 'servingSize'];
   dataSource: any = [];
   value: string = 'Cheddar Cheese';
 

@@ -346,6 +346,12 @@
       </ng-container>
 
       <!-- Name Column -->
+      <ng-container matColumnDef="brandOwner">
+        <th mat-header-cell *matHeaderCellDef> Brand Owner </th>
+        <td mat-cell *matCellDef="let element"> {{element.brandOwner}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
       <ng-container matColumnDef="brandName">
         <th mat-header-cell *matHeaderCellDef> Brand Name </th>
         <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
