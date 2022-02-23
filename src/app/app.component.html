@@ -337,7 +337,7 @@
   <!--  <mat-form-field class="example-full-width" appearance="fill">-->
   <button mat-button color="primary" (click)="onSearch()">Search</button>
   <!--  </mat-form-field>-->
-  <mat-paginator [hidePageSize]="true" [length]="totalResults" (page)="onPageChange($event)"></mat-paginator>
+  <mat-paginator #paginatorTop [hidePageSize]="true" [length]="totalResults" (page)="onPageChange($event)"></mat-paginator>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -388,7 +388,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <mat-paginator [hidePageSize]="true" [length]="totalResults" (page)="onPageChange($event)"></mat-paginator>
+  <mat-paginator #paginatorBottom [hidePageSize]="true" [length]="totalResults" (page)="onPageChange($event)"></mat-paginator>
 </div>
 
 <router-outlet></router-outlet>
