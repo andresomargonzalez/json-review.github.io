@@ -346,43 +346,43 @@
     <!-- Position Column -->
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef> Description</th>
-      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.description || '-' }} </td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="brandOwner">
       <th mat-header-cell *matHeaderCellDef> Brand Owner</th>
-      <td mat-cell *matCellDef="let element"> {{element.brandOwner}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.brandOwner || '-' }} </td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="brandName">
       <th mat-header-cell *matHeaderCellDef> Brand Name</th>
-      <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.brandName || '-' }} </td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="foodCategory">
       <th mat-header-cell *matHeaderCellDef> Category</th>
-      <td mat-cell *matCellDef="let element"> {{element.foodCategory}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.foodCategory || '-'}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="marketCountry">
       <th mat-header-cell *matHeaderCellDef> Market Country</th>
-      <td mat-cell *matCellDef="let element"> {{element.marketCountry}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.marketCountry || '-' }} </td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="packageWeight">
       <th mat-header-cell *matHeaderCellDef> Package Weight</th>
-      <td mat-cell *matCellDef="let element"> {{element.packageWeight}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.packageWeight || '-' }} </td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="servingSize">
       <th mat-header-cell *matHeaderCellDef> Serving Size</th>
-      <td mat-cell *matCellDef="let element"> {{element.servingSize}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.servingSize || '-' }} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

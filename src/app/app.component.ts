@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {MatPaginator} from "@angular/material/paginator";
 
+const API_KEY = 'bekcIIj3vysyGzODtR8sWf4XPNqgBEUWmvR1kFkp';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,7 +26,7 @@ export class AppComponent implements OnInit {
       const {
         foods,
         totalHits: totalResults
-      }: any = await this.http.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=${this.value}&pageNumber=1`).toPromise();
+      }: any = await this.http.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${this.value}&pageNumber=1`).toPromise();
       this.totalResults = totalResults;
       this.dataSource = foods;
       this.topPaginator.firstPage();
@@ -41,7 +42,7 @@ export class AppComponent implements OnInit {
       const {
         foods,
         totalHits: totalResults
-      }: any = await this.http.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=${this.value}&pageNumber=1`).toPromise();
+      }: any = await this.http.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${this.value}&pageNumber=1`).toPromise();
       this.totalResults = totalResults;
       this.dataSource = foods;
       this.topPaginator.firstPage();
@@ -54,11 +55,11 @@ export class AppComponent implements OnInit {
 
   }
 
-  
+
   async onPageChange(data: any) {
     try {
       const {pageIndex} = data;
-      const {foods}: any = await this.http.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=${this.value}&pageNumber=${pageIndex + 1}`).toPromise();
+      const {foods}: any = await this.http.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${this.value}&pageNumber=${pageIndex + 1}`).toPromise();
       this.topPaginator.pageIndex = pageIndex;
       this.bottomPaginator.pageIndex = pageIndex;
       this.dataSource = foods;
