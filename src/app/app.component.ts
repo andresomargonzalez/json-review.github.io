@@ -67,4 +67,8 @@ export class AppComponent implements OnInit {
       alert(e.error.error.message);
     }
   }
+
+  async onEnter() {
+    await this.onSearch();
+  }
 }

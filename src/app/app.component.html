@@ -332,7 +332,7 @@
 <div class="content" role="main">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="value" [(ngModel)]="value">
+    <input matInput placeholder="Ex. Pizza" value="value" [(ngModel)]="value" (keyup.enter)="onEnter()" >
   </mat-form-field>
   <!--  <mat-form-field class="example-full-width" appearance="fill">-->
   <button mat-button color="primary" (click)="onSearch()">Search</button>
